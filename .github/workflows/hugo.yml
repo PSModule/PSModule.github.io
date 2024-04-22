@@ -51,7 +51,7 @@ jobs:
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Get theme
-        run: git submodule add https://github.com/google/docsy.git themes/github.com/google/docsy.git
+        run: git submodule add https://github.com/google/docsy.git themes/github.com/google/docsy
       - name: Get theme
         run: git submodule add https://github.com/FortAwesome/Font-Awesome.git themes/github.com/FortAwesome/Font-Awesome
 
