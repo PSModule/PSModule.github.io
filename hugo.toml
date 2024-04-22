@@ -7,5 +7,5 @@ title = 'My New Hugo Site'
     extended = true
     min = "0.110.0"
   [[module.imports]]
-    path = "docsy"
+    path = "github.com/google/docsy"
     disable = false
