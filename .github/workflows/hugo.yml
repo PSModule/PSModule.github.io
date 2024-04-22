@@ -52,7 +52,9 @@ jobs:
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Get theme
         run: |
+          npm install --save-dev autoprefixer  
           npm install postcss-cli
+          npm install -D postcss
           git submodule add https://github.com/google/docsy.git themes/github.com/google/docsy
           git submodule add https://github.com/FortAwesome/Font-Awesome.git themes/github.com/FortAwesome/Font-Awesome
           git submodule add https://github.com/twbs/bootstrap.git themes/github.com/twbs/bootstrap
