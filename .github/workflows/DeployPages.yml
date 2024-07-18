@@ -37,9 +37,15 @@ jobs:
           repository: PSModule/.github
           path: src
 
+      - name: Debuf - Filesystem
+        shell: pwsh
+        run: |
+          Write-Verbose (Get-ChildItem -Recurse -File | Select-Object -ExpandProperty FullName | Sort-Object) -Verbose
+
       - name: Copy GitHub profile folder to docs
         shell: pwsh
         run: |
+          Write-Verbose (Get-ChildItem -Path 'docs' -Recurse -File | Select-Object -ExpandProperty FullName | Sort-Object) -Verbose
           Copy-Item -Path src/profile/* -Destination docs -Recurse -Force
           Write-Verbose (Get-ChildItem -Path 'docs' -Recurse -File | Select-Object -ExpandProperty FullName | Sort-Object) -Verbose
 
