@@ -1,0 +1,58 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+defaults:
+  run:
+    shell: pwsh
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      - uses: actions/checkout@v4
+        with:
+          repository: PSModule/.github
+          path: src
+
+      - name: Copy GitHub profile folder to docs
+        shell: pwsh
+        run: |
+          Copy-Item -Path src/profile/* -Destination docs -Recurse -Force
+          Write-Verbose (Get-ChildItem -Path 'docs' -Recurse -File | Select-Object -ExpandProperty FullName | Sort-Object) -Verbose
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Install mkdoks-material
+        run: |
+          pip install mkdocs-material
+          pip install mkdocs-git-authors-plugin
+          pip install mkdocs-git-revision-date-localized-plugin
+          pip install mkdocs-git-committers-plugin-2
+
+      - name: Publish mkdocs-material project
+        run: |
+          mkdocs gh-deploy --force
