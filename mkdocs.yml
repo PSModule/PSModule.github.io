@@ -1,12 +1,13 @@
 site_name: ${{ REPO_NAME }}
+docs_dir: docs/profile
 theme:
   name: material
   language: en
   font:
     text: Roboto
     code: Sono
-  logo: assets/icon.png
-  favicon: assets/icon.png
+  logo: icon.png
+  favicon: icon.png
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
