@@ -36,6 +36,7 @@ jobs:
         with:
           repository: PSModule/.github
           path: src
+          fetch-depth: 0
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
