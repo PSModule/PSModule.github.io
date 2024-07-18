@@ -37,28 +37,28 @@ jobs:
           repository: PSModule/.github
           path: src
 
-      - name: Debuf - Filesystem
+      - name: Debug - Filesystem
         shell: pwsh
         run: |
-          Write-Verbose (Get-ChildItem -Recurse -File | Select-Object -ExpandProperty FullName | Sort-Object) -Verbose
+          Get-ChildItem -Recurse -File | Select-Object -ExpandProperty FullName | Sort-Object
 
-      - name: Copy GitHub profile folder to docs
-        shell: pwsh
-        run: |
-          Write-Verbose (Get-ChildItem -Path 'docs' -Recurse -File | Select-Object -ExpandProperty FullName | Sort-Object) -Verbose
-          Copy-Item -Path src/profile/* -Destination docs -Recurse -Force
-          Write-Verbose (Get-ChildItem -Path 'docs' -Recurse -File | Select-Object -ExpandProperty FullName | Sort-Object) -Verbose
+      # - name: Copy GitHub profile folder to docs
+      #   shell: pwsh
+      #   run: |
+      #     Write-Verbose (Get-ChildItem -Path 'docs' -Recurse -File | Select-Object -ExpandProperty FullName | Sort-Object) -Verbose
+      #     Copy-Item -Path src/profile/* -Destination docs -Recurse -Force
+      #     Write-Verbose (Get-ChildItem -Path 'docs' -Recurse -File | Select-Object -ExpandProperty FullName | Sort-Object) -Verbose
 
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
+      # - name: Configure GitHub Pages
+      #   uses: actions/configure-pages@v5
 
-      - name: Install mkdoks-material
-        run: |
-          pip install mkdocs-material
-          pip install mkdocs-git-authors-plugin
-          pip install mkdocs-git-revision-date-localized-plugin
-          pip install mkdocs-git-committers-plugin-2
+      # - name: Install mkdoks-material
+      #   run: |
+      #     pip install mkdocs-material
+      #     pip install mkdocs-git-authors-plugin
+      #     pip install mkdocs-git-revision-date-localized-plugin
+      #     pip install mkdocs-git-committers-plugin-2
 
-      - name: Publish mkdocs-material project
-        run: |
-          mkdocs gh-deploy --force
+      # - name: Publish mkdocs-material project
+      #   run: |
+      #     mkdocs gh-deploy --force
