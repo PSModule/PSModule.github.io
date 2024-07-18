@@ -47,7 +47,7 @@ theme:
 
 repo_name: PSModule/.github
 repo_url: https://github.com/PSModule/.github/
-edit_uri: blob/main/profile/README.md
+edit_uri: blob/main/profile/
 
 plugins:
   - search
