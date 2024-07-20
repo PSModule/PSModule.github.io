@@ -2,13 +2,6 @@ name: Publish Docs
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - docs/**
-      - mkdocs.yml
-      - .github/workflows/Docs.yml
 
 env:
   GH_TOKEN: ${{ github.token }}
