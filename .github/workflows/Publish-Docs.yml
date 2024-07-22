@@ -30,7 +30,7 @@ jobs:
         run: |
           New-Item -Path .\docs -ItemType Directory -Force
           Copy-Item -Path .\src\profile\* -Destination .\docs -Force -Recurse
-          Copy-Item -Path .\src\.github\*.md -Destination .\docs -Force -Recurse
+          Copy-Item -Path .\src\.github\*.md -Destination .\docs -Force -Recurse -Exclude 'pull_request_template.md'
           Get-ChildItem .\docs | Select-Object -ExpandProperty FullName | Sort-Object
 
       - uses: actions/configure-pages@v5
