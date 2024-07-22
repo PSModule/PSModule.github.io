@@ -26,6 +26,13 @@ jobs:
           path: src
           fetch-depth: 0
 
+      - name: Compile docs
+        run: |
+          New-Item -Path .\docs -ItemType Directory -Force
+          Copy-Item -Path .\src\profile\* -Destination .\docs -Force -Recurse
+          Copy-Item -Path .\src\.github\*.md -Destination .\docs -Force -Recurse
+          Get-ChildItem .\docs | Select-Object -ExpandProperty FullName | Sort-Object
+
       - uses: actions/configure-pages@v5
 
       - name: Install mkdoks-material
