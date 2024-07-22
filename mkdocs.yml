@@ -36,7 +36,6 @@ theme:
   features:
     - navigation.instant
     - navigation.instant.progress
-    - navigation.tabs
     - navigation.indexes
     - navigation.top
     - navigation.tracking
@@ -65,6 +64,9 @@ markdown_extensions:
 
 extra:
   social:
+    - icon: fontawesome/regular/envelope
+      link: mailto:psmodule@psmodule.io
+      name: e-mail
     - icon: fontawesome/brands/discord
       link: https://discord.gg/jedJWCPAhD
       name: PSModule on Discord
