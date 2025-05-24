@@ -1,5 +1,5 @@
 # A GitHub & PowerShell Development Framework
 
-Automation and tools with GitHub and PowerShell.
+Empowering developers to automate effortlessly, innovate continuously, and deliver impactful solutions through PowerShell and GitHub.
 
 [PSModule/Docs](https://psmodule.io/docs/)
