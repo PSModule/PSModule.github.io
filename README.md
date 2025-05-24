@@ -1,5 +1,5 @@
 # A GitHub & PowerShell Development Framework
 
-> Empowering Automators and Tool-Makers to Transform Ideas into Impact
+Automation and tools with GitHub and PowerShell.
 
 [PSModule/Docs](https://psmodule.io/docs/)
