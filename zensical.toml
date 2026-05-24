@@ -1,0 +1,62 @@
+# Zensical configuration
+# https://zensical.org/docs/setup/basics/
+
+[project]
+site_name = "PSModule"
+site_url = "https://psmodule.io/"
+docs_dir = "docs"
+repo_name = "PSModule"
+repo_url = "https://github.com/PSModule"
+copyright = "Copyright &copy; 2023 - 2025 PSModule"
+
+[project.theme]
+language = "en"
+font.text = "Mona Sans"
+font.code = "Source Code Pro"
+features = [
+  "navigation.instant",
+  "navigation.instant.progress",
+  "navigation.top",
+]
+
+[project.theme.icon]
+repo = "material/github"
+
+# Palette toggle for dark mode
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+primary = "black"
+accent = "light blue"
+toggle.icon = "material/toggle-switch-off-outline"
+toggle.name = "Switch to light mode"
+
+# Palette toggle for light mode
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+primary = "black"
+accent = "light blue"
+toggle.icon = "material/toggle-switch"
+toggle.name = "Switch to system preference"
+
+[project.plugins.search]
+
+[project.markdown_extensions.attr_list]
+
+[project.markdown_extensions.md_in_html]
+
+[[project.extra.social]]
+icon = "fontawesome/brands/discord"
+link = "https://discord.gg/jedJWCPAhD"
+name = "PSModule on Discord"
+
+[[project.extra.social]]
+icon = "material/powershell"
+link = "https://www.powershellgallery.com/profiles/PSModule.io"
+name = "PSModule on the PowerShell Gallery"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/PSModule/"
+name = "PSModule on GitHub"
