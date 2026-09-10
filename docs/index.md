@@ -18,7 +18,7 @@ by leveraging GitHub and PowerShell to automate repetitive tasks, so you can con
 
     Guides, standards, and ways of working for building with PSModule.
 
-    [:octicons-arrow-right-24: Read the docs](https://psmodule.io/docs/)
+    [:octicons-arrow-right-24: Read the docs](https://psmodule.io/Process-PSModule/)
 
 - :material-package-variant: **PowerShell Gallery**
 
@@ -34,7 +34,7 @@ by leveraging GitHub and PowerShell to automate repetitive tasks, so you can con
 
     Explore the source code and contribute to the framework.
 
-    [:octicons-arrow-right-24: Visit GitHub](https://github.com/PSModule)
+    [:octicons-arrow-right-24: Visit GitHub](https://github.com/PSModule/Process-PSModule)
 
 - :fontawesome-brands-discord: **Community**
 
